@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 4rem;
+}
+@layer utilities {
+  .text-title {
+    @apply text-green-800 dark:text-base-100;
+  }
+  .text-base {
+    @apply text-green-600 dark:text-base-400;
+  }
+  .text-muted {
+    @apply text-base-500;
+  }
+  .border-base {
+    @apply border-base-300 dark:border-base-700;
+  }
+  .absolute-center {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+}
+
+@layer components {
+  .title-gradient {
+    @apply bg-gradient-to-b from-green-800 to-base-900 dark:from-green-800 dark:to-base-50 bg-clip-text text-transparent;
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
